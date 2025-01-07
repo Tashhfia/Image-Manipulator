@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import copy
 from skimage import io
 
-class ImageManipulator():
+class Preprocess():
     def __init__(self, url) -> None:
         self.image = io.imread(url)
 
@@ -47,7 +47,7 @@ class ImageManipulator():
 
 
 def main():
-    im = ImageManipulator("https://i.pinimg.com/736x/8c/dc/a5/8cdca5e3979427241ae50537c9be932b.jpg")
+    im = Preprocess("https://i.pinimg.com/736x/8c/dc/a5/8cdca5e3979427241ae50537c9be932b.jpg")
     im.crop(x=1000, y=150, width=128, height=128)
     # k = im.flip(0)
     # plt.imshow(k)
